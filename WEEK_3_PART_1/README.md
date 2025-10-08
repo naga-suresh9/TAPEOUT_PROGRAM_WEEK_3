@@ -45,6 +45,9 @@ Launch Yosys:
 
 ```bash
 yosys
+
+![Image](https://github.com/user-attachments/assets/f9a841eb-2402-4c37-b0b0-a33db9372cf9)
+
 ```
 
 Then, inside the Yosys shell:
@@ -55,7 +58,10 @@ read_verilog -I /home/nagasuresh/suresh/VSDBabySoC/src/include /home/nagasuresh/
 read_verilog -I /home/nagasuresh/suresh/VSDBabySoC/src/include /home/nagasuresh/suresh/VSDBabySoC/src/module/clk_gate.v
 ```
 
-🖼️ *Image Placeholder – Yosys Loading Modules*
+🖼️ 
+![Image](https://github.com/user-attachments/assets/b17259f6-fab3-468c-a91a-143e3b5705ee)
+![Image](https://github.com/user-attachments/assets/162a9dc1-1a64-4b18-8144-51b9489096be)
+![Image](https://github.com/user-attachments/assets/e3cd5043-f472-4750-9578-63852b2e4868)
 
 ---
 
@@ -67,7 +73,10 @@ read_liberty -lib /home/nagasuresh/suresh/VSDBabySoC/src/lib/avsddac.lib
 read_liberty -lib /home/nagasuresh/suresh/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
-🖼️ *Image Placeholder – Liberty File Loading*
+🖼️ 
+![Image](https://github.com/user-attachments/assets/d512b31e-9a8f-4310-be37-a5fc4d332df5)
+![Image](https://github.com/user-attachments/assets/95bf71e9-75ce-44dc-bdb3-16e56246df86)
+![Image](https://github.com/user-attachments/assets/cbd08ef6-2a69-40af-b49e-adfc7928aae2)
 
 ---
 
@@ -76,8 +85,19 @@ read_liberty -lib /home/nagasuresh/suresh/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt
 ```tcl
 synth -top vsdbabysoc
 ```
+![Image](https://github.com/user-attachments/assets/b96e78c6-a736-424b-8029-a2327c94cd93)
 
-🖼️ *Image Placeholder – Yosys Synthesis Output*
+![Image](https://github.com/user-attachments/assets/560ecf3e-584e-450b-a997-47f56a870e2a)
+
+![Image](https://github.com/user-attachments/assets/df9768ae-5ed2-4a46-9496-9b80d42052e9)
+
+![Image](https://github.com/user-attachments/assets/b0ab8b64-3f4c-42d1-84f1-305fe49d87d2)
+
+![Image](https://github.com/user-attachments/assets/5e404af6-bf5f-46db-81c2-fd67ada569dd)
+
+![Image](https://github.com/user-attachments/assets/d8b4538b-0062-4595-b74a-19212971484e)
+🖼️ 
+
 
 ---
 
@@ -87,7 +107,8 @@ synth -top vsdbabysoc
 dfflibmap -liberty /home/nagasuresh/suresh/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
-🖼️ *Image Placeholder – DFF Mapping*
+🖼️ 
+![Image](https://github.com/user-attachments/assets/66216e61-172d-47ff-9e51-b210095df062)
 
 ---
 
@@ -98,7 +119,10 @@ opt
 abc -liberty /home/nagasuresh/suresh/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
 ```
 
-🖼️ *Image Placeholder – ABC Optimization Logs*
+🖼️ 
+![Image](https://github.com/user-attachments/assets/d85b157a-ca01-4695-8d10-ed40b2bfbf40)
+
+![Image](https://github.com/user-attachments/assets/ac9091ba-7c80-47c2-a27e-c50fbfdcc6aa)
 
 ---
 
@@ -111,8 +135,8 @@ clean -purge
 rename -enumerate
 ```
 
-🖼️ *Image Placeholder – Clean-Up Logs*
-
+🖼️ *
+![Image](https://github.com/user-attachments/assets/30347b63-a41a-452a-ab7c-d52455e0f3da)
 ---
 
 ### 📊 Step 7: Check Design Statistics
@@ -121,7 +145,10 @@ rename -enumerate
 stat
 ```
 
-🖼️ *Image Placeholder – Design Statistics Output*
+🖼️ 
+![Image](https://github.com/user-attachments/assets/7f66043e-2d57-4edd-9572-aa0a0d0c9c64)
+
+![Image](https://github.com/user-attachments/assets/a0a2fe00-b50f-4f51-8c66-5664a05b0f18)
 
 ---
 
@@ -131,7 +158,9 @@ stat
 write_verilog -noattr /home/nagasuresh/suresh/VSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
 ```
 
-🖼️ *Image Placeholder – Synthesized Netlist Saved Successfully*
+🖼️ 
+![Image](https://github.com/user-attachments/assets/7e90511a-dc05-4b6c-b363-7b0bae499094)
+– Synthesized Netlist Saved Successfully*
 
 ---
 
@@ -147,7 +176,9 @@ iverilog -o /home/nagasuresh/suresh/VSDBabySoC/output/post_synth_sim/post_synth_
 /home/nagasuresh/suresh/VSDBabySoC/src/module/testbench.v
 ```
 
-🖼️ *Image Placeholder – Compilation Output*
+🖼️ 
+![Image](https://github.com/user-attachments/assets/b6124928-34e9-4eaa-a54b-c63702ce5511)
+– Compilation Output*
 
 ---
 
@@ -164,18 +195,17 @@ cd /home/nagasuresh/suresh/VSDBabySoC/output/post_synth_sim/
 ```bash
 ./post_synth_sim.out
 ```
-
-🖼️ *Image Placeholder – Simulation Terminal Output*
-
 ---
-
 ### 📈 Step 4: View Waveforms in GTKWave
 
 ```bash
 gtkwave post_synth_sim.vcd
 ```
 
-🖼️ *Image Placeholder – GTKWave Output*
+🖼️ 
+
+– GTKWave Output*
+![Image](https://github.com/user-attachments/assets/eea8ebcb-b0d1-4abd-8433-5ad636cdb07a)
 
 ---
 
