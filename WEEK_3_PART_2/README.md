@@ -75,10 +75,4 @@ Completed **Udemy TVSD – Static Timing Analysis 1** ✅
 4. Analyze **slack & violations**
 5. Optimize **logic or constraints** if needed
 
-💡 **Tip:** Always focus on **critical paths first** – they determine circuit speed.
 
----
-
-If you want, I can also **draw a colorful flowchart with emojis** showing **GLS → STA workflow with setup, hold, and slack concepts**, which will make your submission look extra professional and visually appealing.
-
-Do you want me to create that flowchart?
